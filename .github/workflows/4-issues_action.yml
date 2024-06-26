@@ -1,0 +1,14 @@
+name: Issues Events
+run-name: ${{ github.actor }} opened an issue
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  issue_events:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Triggered the workflow
+        run: echo "${{ github.event }}"
