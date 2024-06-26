@@ -1,4 +1,5 @@
 name: Test Project
+run-name: ${{ github.actor }} is testing out GitHub Actions
 
 on: push
 
