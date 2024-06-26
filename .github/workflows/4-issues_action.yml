@@ -5,10 +5,11 @@ on:
   issues:
     types:
       - opened
+      - edited
 
 jobs:
   issue_events:
     runs-on: ubuntu-latest
     steps:
       - name: Triggered the workflow
-        run: echo "${{ github.event }}"
+        run: echo "${{ toJson(github.event) }}"
