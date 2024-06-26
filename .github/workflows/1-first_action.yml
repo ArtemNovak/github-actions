@@ -1,0 +1,13 @@
+name: first-workflow
+
+on: workflow_dispatch
+
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing greeting
+        run: |
+          echo DAT ASS
+          echo Hi
+          
