@@ -1,7 +1,9 @@
 name: Deploy Project
 run-name: ${{ github.actor }} is testing out GitHub Actions
 
-on: push
+on: 
+  push:
+  workflow_dispatch:
 
 jobs:
   test:
@@ -19,6 +21,7 @@ jobs:
         run: npm test
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
